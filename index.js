@@ -2,6 +2,7 @@
 const Joi=require('joi');
 const express=require('express');
 const { request } = require('express');
+const db=require('./db')
 const app=express();
 app.use(express.json())
 
@@ -85,3 +86,5 @@ res.send(courses);
 const port=process.env.port||3000;
 //app.listen(3000,()=>console.log('listening for port 3000.......'))
 app.listen(port,()=>console.log(`listening for port ${port}.......`))
+
+console.log(db.p());
